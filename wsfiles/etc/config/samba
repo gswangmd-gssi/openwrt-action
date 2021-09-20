@@ -1,0 +1,9 @@
+
+config samba
+	option workgroup 'WORKGROUP'
+	option name 'OpenWrt'
+	option description 'OpenWrt'
+	option homes '0'
+	option autoshare '0'
+	option enabled '0'
+
