@@ -31,7 +31,7 @@ env:
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
-  DEFAULT_ZZZ_SETTINGS_FILE: zzz-default-settings
+  DEFAULT_ZZZ_SETTINGS_FILE: zzz-default-settings-wmd
   DEFAULT_SETTINGS_FILES: wmdfiles
   TZ: Asia/Shanghai
 
