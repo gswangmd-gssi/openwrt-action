@@ -1,0 +1,16 @@
+#================================================================================================
+# Add rules for Bypass router 
+# Please change the value of ZT_IFACE variable according to the actual situation of zerotier.
+# The following three rules are very important. 
+# Canceling the rules may result in loss of access to the domestic network.
+#                                      Last Modifild by Wangmingde 2020-10-21
+#================================================================================================
+#
+PHY_IFACE=eth0; ZT_IFACE=ztyouvhsi2
+#
+iptables -t nat -A POSTROUTING -o $PHY_IFACE -j MASQUERADE
+iptables -A FORWARD -i $PHY_IFACE -o $ZT_IFACE -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i $ZT_IFACE -o $PHY_IFACE -j ACCEPT
+#
+#================================================================================================
+iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53
