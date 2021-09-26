@@ -42,9 +42,3 @@ A template for building OpenWrt with GitHub Actions
 ## License
 
 [MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
-
-## Last Modifield: 2021-09-23
- - .config
- - wmd.config
- - ws.config
- 
