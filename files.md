@@ -9,7 +9,7 @@
 	- zzz-default-settings-wmd		固件默认设置
 	
 文件的使用：
-env:
+
 REPO_URL: https://github.com/gswangmd-gssi/lede
 REPO_BRANCH: master
 FEEDS_CONF: feeds.conf.default
