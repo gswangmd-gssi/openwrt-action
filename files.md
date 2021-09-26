@@ -7,10 +7,8 @@
 	- wmd.config 				固件编译配置
 	- wmdfiles				插件默认设置
 	- zzz-default-settings-wmd		固件默认设置
-	
-文件的使用：
-        REPO_URL: https://github.com/gswangmd-gssi/lede
-        REPO_BRANCH: master
+
+REPO_BRANCH: master
         FEEDS_CONF: feeds.conf.default
         CONFIG_FILE: ws.config
         DIY_P1_SH: diy-part1.sh
@@ -23,3 +21,4 @@
         DEFAULT_ZZZ_SETTINGS_FILE: zzz-default-settings-ws
         DEFAULT_SETTINGS_FILES: wsfiles
         TZ: Asia/Shanghai
+
