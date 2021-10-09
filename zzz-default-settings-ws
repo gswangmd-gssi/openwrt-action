@@ -49,7 +49,7 @@ date=`date +%Y.%m.%d`
 date1=`date +%h`
 
 sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release
-echo "DISTRIB_REVISION='v$date For WS'" >> /etc/openwrt_release
+echo "DISTRIB_REVISION='v$date '" >> /etc/openwrt_release
 sed -i '/DISTRIB_RELEASE/d' /etc/openwrt_release
 echo "DISTRIB_RELEASE='v$date1'" >> /etc/openwrt_release
 sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
