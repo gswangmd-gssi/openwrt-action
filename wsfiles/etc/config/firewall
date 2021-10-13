@@ -2,43 +2,33 @@
 config defaults
 	option input 'ACCEPT'
 	option output 'ACCEPT'
-	option forward 'ACCEPT'
+	option forward 'REJECT'
 	option fullcone '1'
-	option drop_invalid '1'
-	option syn_flood '1'
 
 config zone
 	option name 'lan'
+	list network 'lan'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
 	option forward 'ACCEPT'
-	option network 'lan'
 
 config include
 	option path '/etc/firewall.user'
-
-config include 'miniupnpd'
-	option type 'script'
-	option path '/usr/share/miniupnpd/firewall.include'
-	option family 'any'
-	option reload '1'
 
 config include 'zerotier'
 	option type 'script'
 	option path '/etc/zerotier.start'
 	option reload '1'
 
-config include 'adbyby'
+config include 'adblock'
 	option type 'script'
-	option path '/var/etc/adbyby.include'
+	option path '/var/etc/adblock.include'
 	option reload '1'
 
-config rule 'adblock'
-	option name 'adblock'
-	option target 'DROP'
-	option src 'wan'
-	option proto 'tcp'
-	option dest_port '8118'
+config include 'mia'
+	option type 'script'
+	option path '/etc/mia.include'
+	option reload '1'
 
 config include 'passwall'
 	option type 'script'
@@ -50,10 +40,8 @@ config include 'passwall_server'
 	option path '/var/etc/passwall_server.include'
 	option reload '1'
 
-config rule 'kms'
-	option name 'kms'
-	option target 'ACCEPT'
-	option src 'wan'
-	option proto 'tcp'
-	option dest_port '1688'
+config include 'shadowsocksr'
+	option type 'script'
+	option path '/var/etc/shadowsocksr.include'
+	option reload '1'
 
