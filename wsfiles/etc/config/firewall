@@ -2,8 +2,8 @@
 config defaults
 	option input 'ACCEPT'
 	option output 'ACCEPT'
-	option forward 'REJECT'
 	option fullcone '1'
+	option forward 'ACCEPT'
 
 config zone
 	option name 'lan'
@@ -44,4 +44,11 @@ config include 'shadowsocksr'
 	option type 'script'
 	option path '/var/etc/shadowsocksr.include'
 	option reload '1'
+
+config rule 'kms'
+	option name 'kms'
+	option target 'ACCEPT'
+	option src 'wan'
+	option proto 'tcp'
+	option dest_port '1688'
 
