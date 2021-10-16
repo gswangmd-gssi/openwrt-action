@@ -13,3 +13,4 @@ PHY_IFACE=eth0; ZT_IFACE=ztyouvhsi2
 # iptables -A FORWARD -i $ZT_IFACE -o $PHY_IFACE -j ACCEPT
 #
 #================================================================================================
+

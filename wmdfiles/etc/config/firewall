@@ -20,11 +20,6 @@ config include 'zerotier'
 	option path '/etc/zerotier.start'
 	option reload '1'
 
-config include 'adblock'
-	option type 'script'
-	option path '/var/etc/adblock.include'
-	option reload '1'
-
 config include 'mia'
 	option type 'script'
 	option path '/etc/mia.include'
