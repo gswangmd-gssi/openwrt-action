@@ -15,10 +15,10 @@ dns:
   bind_hosts:
   - 0.0.0.0
   port: 5553
-  statistics_interval: 7
+  statistics_interval: 30
   querylog_enabled: false
   querylog_file_enabled: true
-  querylog_interval: 7
+  querylog_interval: 30
   querylog_size_memory: 1000
   anonymize_client_ip: false
   protection_enabled: true
@@ -36,7 +36,7 @@ dns:
   upstream_dns_file: ""
   bootstrap_dns:
   - 127.0.0.1:53
-  all_servers: true
+  all_servers: false
   fastest_addr: false
   allowed_clients: []
   disallowed_clients: []
@@ -203,7 +203,7 @@ whitelist_filters: []
 user_rules:
 - '@@||taobao.com^$important'
 - '@@||tmall.com^$important'
-- '@@||jd.com^important'
+- '@@||jd.com^^$important'
 - '@@||flyme.cn^$important'
 - '@@||meizu.com^$important'
 - '@@||flydigi.com^'
