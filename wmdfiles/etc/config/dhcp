@@ -20,6 +20,7 @@ config dnsmasq
 	option resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
 	list server '127.0.0.1#6053'
 
+
 config dhcp 'lan'
 	option interface 'lan'
 	option ra_slaac '1'
