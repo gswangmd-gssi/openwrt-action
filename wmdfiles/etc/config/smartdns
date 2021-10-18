@@ -9,7 +9,7 @@ config smartdns
 	option seconddns_tcp_server '1'
 	option coredump '0'
 	option port '6053'
-	option redirect 'none'
+	option redirect 'dnsmasq-upstream'
 	option seconddns_port '5335'
 	option seconddns_server_group 'fq_dns'
 	option seconddns_enabled '1'
@@ -25,7 +25,7 @@ config smartdns
 	option seconddns_no_speed_check '1'
 	option seconddns_no_cache '1'
 	option ipv6_server '1'
-	list old_redirect 'none'
+	list old_redirect 'dnsmasq-upstream'
 	list old_port '6053'
 	list old_enabled '1'
 
