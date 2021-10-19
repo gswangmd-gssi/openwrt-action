@@ -18,5 +18,4 @@ config interface 'lan'
 	option _orig_bridge 'true'
 	option ifname 'eth0'
 	option dns '127.0.0.1'
-	option ip6assign '64'
 
