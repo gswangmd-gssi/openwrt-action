@@ -81,7 +81,7 @@ config global_subscribe
 	option trojan_type 'trojan-plus'
 
 config auto_switch
-	option testing_time '1'
+	option testing_time '5'
 	option connect_timeout '3'
 	option retry_num '3'
 	option shunt_logic '1'
