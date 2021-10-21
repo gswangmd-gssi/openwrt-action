@@ -99,7 +99,7 @@ filters:
   url: https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-easylist.txt
   name: anti-AD命中率最高列表
   id: 139789122
-- enabled: true
+- enabled: false
   url: https://gitee.com/halflife/list/raw/master/ad.txt
   name: halflife合并乘风
   id: 139789131
@@ -107,7 +107,7 @@ filters:
   url: https://banbendalao.coding.net/p/adgk/d/ADgk/git/raw/master/ADgk.txt
   name: adgk手机去广告规则
   id: 139789132
-- enabled: true
+- enabled: false
   url: https://gitee.com/xinggsf/Adblock-Rule/raw/master/rule.txt
   name: 乘风 广告过滤规则
   id: 139789133
@@ -119,7 +119,7 @@ filters:
   url: https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds-Ultra.txt
   name: GoodbyeAds 大全去广告
   id: 139789142
-- enabled: true
+- enabled: false
   url: https://gitee.com/xinggsf/Adblock-Rule/raw/master/mv.txt
   name: 乘风 视频广告过滤规则
   id: 139789143
