@@ -84,7 +84,7 @@ tls:
   private_key_path: ""
 filters:
 - enabled: true
-  url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-adguard.txt
+  url: https://anti-ad.net/adguard.txt
   name: 'anti-AD: AdGuard'
   id: 1634946091
 - enabled: true
