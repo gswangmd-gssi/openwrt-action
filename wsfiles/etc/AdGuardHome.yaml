@@ -37,7 +37,7 @@ dns:
   bootstrap_dns:
   - 127.0.0.1:53
   all_servers: false
-  fastest_addr: false
+  fastest_addr: true
   allowed_clients: []
   disallowed_clients: []
   blocked_hosts:
