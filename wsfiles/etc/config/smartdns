@@ -24,8 +24,8 @@ config smartdns
 	option ipv6_server '1'
 	option tcp_server '1'
 	option seconddns_tcp_server '1'
-	option redirect 'none'
-	list old_redirect 'none'
+	option redirect 'dnsmasq-upstream'
+	list old_redirect 'dnsmasq-upstream'
 	list old_port '6053'
 	list old_enabled '1'
 
