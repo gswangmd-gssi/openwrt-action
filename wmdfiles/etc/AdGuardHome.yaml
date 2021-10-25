@@ -16,7 +16,7 @@ dns:
   - 0.0.0.0
   port: 5553
   statistics_interval: 30
-  querylog_enabled: false
+  querylog_enabled: true
   querylog_file_enabled: true
   querylog_interval: 30
   querylog_size_memory: 1000
