@@ -16,6 +16,7 @@ config dnsmasq
 	option port '53'
 	option noresolv '1'
 	option nohosts '1'
+	list server '127.0.0.1#5553'
 
 config dhcp 'lan'
 	option interface 'lan'
