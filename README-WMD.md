@@ -1,5 +1,5 @@
 最新修改:
-	2021-10-29
+2021-10-29
 	1、代码升级；
 	2、只保留基本的adguardhome，不再提供配置界面luci-app-adguardhome
 	
