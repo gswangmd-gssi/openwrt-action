@@ -1,3 +1,13 @@
+2021-10-31
+	1、代码升级；
+	2、取消smartdns；
+	3、修改adguardhome的上游服务器设置文件；
+	4、取消SSR；
+	5、修改passwall默认设置。
+	
+	固件版本：OpenWrt v2021.10.31 / LuCI Master (git-21.280.14233-9b796b1)
+	内核版本：5.4.155
+	
 2021-10-29
 	1、代码升级；
 	2、只保留基本的adguardhome，不再提供配置界面luci-app-adguardhome
