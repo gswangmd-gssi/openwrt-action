@@ -59,6 +59,8 @@ echo "DISTRIB_MODIFIELD='WangMingDe 2021, Gansu Lanzhou '" >> /etc/openwrt_relea
 
 sed -i '/log-facility/d' /etc/dnsmasq.conf
 echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
+# Add DNS Server of AdGuardHome
+echo "server=127.0.0.1#5553" >> /etc/dnsmasq.conf
 
 echo 'hsts=0' > /root/.wgetrc
 
