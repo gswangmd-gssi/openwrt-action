@@ -11,14 +11,9 @@ config global
 	option enabled '1'
 	option tcp_node '8a8efa8918d3475ebee71fc87a7dfe03'
 	option udp_node 'tcp'
+	option dns_mode 'nonuse'
 	option tcp_proxy_mode 'chnroute'
 	option udp_proxy_mode 'chnroute'
-	option dns_mode 'xray'
-	option dns_by 'tcp'
-	option dns_query_strategy 'UseIPv4'
-	option dns_cache '1'
-	option v2ray_dns_mode 'doh'
-	option up_trust_doh 'https://cloudflare-dns.com/dns-query,1.1.1.1'
 
 config global_haproxy
 	option balancing_enable '0'
