@@ -18,6 +18,7 @@ config dnsmasq
 	option localservice '1'
 	option ednspacket_max '1232'
 	option localuse '1'
+	list server '127.0.0.1#5553'
 
 config dhcp 'lan'
 	option interface 'lan'
