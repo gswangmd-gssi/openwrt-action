@@ -5,7 +5,10 @@
 		端口：5553
 		上游DNS服务器文件：/etc/AdGuardHome.upstream_dns
 		默认设置为5553端口重定向到dnsmasq, 具体设置可见自定义防火墙规则。
-		
+		如果用adguardhome作为dnsmasq的上游服务器:
+				a）注销防火墙自定义规则；
+				b）设置DHCP/DNS中的DNS 转发：127.0.0.1#5553
+				
 	固件版本：OpenWrt v2021.11.03 / LuCI Master (git-21.280.14233-9b796b1)
 	内核版本：5.10.77
 
