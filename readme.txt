@@ -1,7 +1,11 @@
 2021-11-04
 	1、代码升级；
 	2、passwall升级；
-	
+	3、内置adguarghome：
+		端口：5553
+		上游DNS服务器文件：/etc/AdGuardHome.upstream_dns
+		默认设置为5553端口重定向到dnsmasq, 具体设置可见自定义防火墙规则。
+		
 	固件版本：OpenWrt v2021.11.03 / LuCI Master (git-21.280.14233-9b796b1)
 	内核版本：5.10.77
 
