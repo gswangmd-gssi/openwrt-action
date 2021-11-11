@@ -13,9 +13,9 @@ config global
 	option tcp_proxy_mode 'chnroute'
 	option udp_proxy_mode 'chnroute'
 	option chinadns_ng '0'
-	option tcp_node '43e1072331434feebc41961139de95c4'
 	option dns_mode 'custom'
 	option custom_dns '127.0.0.1#5335'
+	option tcp_node '43e1072331434feebc41961139de95c4'
 
 config global_haproxy
 	option balancing_enable '0'
@@ -81,12 +81,14 @@ config global_subscribe
 	option trojan_type 'trojan-plus'
 
 config auto_switch
-	option testing_time '5'
 	option connect_timeout '3'
 	option retry_num '3'
 	option shunt_logic '1'
 	option enable '1'
 	option restore_switch '1'
+	option testing_time '2'
+	list tcp_node '43e1072331434feebc41961139de95c4'
+	list tcp_node '2934136b25ae4765ad5ea2c36066fef3'
 
 config nodes '696cd32c1d5149ee95fd1b3accbad6df'
 	option remarks '分流总节点'
