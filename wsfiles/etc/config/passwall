@@ -14,7 +14,7 @@ config global
 	option udp_proxy_mode 'chnroute'
 	option chinadns_ng '0'
 	option dns_mode 'custom'
-	option custom_dns '127.0.0.1#5335'
+	option custom_dns '127.0.0.1#5353'
 	option tcp_node '43e1072331434feebc41961139de95c4'
 
 config global_haproxy
