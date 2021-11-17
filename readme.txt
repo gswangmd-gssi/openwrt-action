@@ -1,4 +1,10 @@
-
+2021-11-17
+	1、重新定义了smartdns-wmd/adguardhome-wmd/luci-app-adguardhome-wmd
+	2、代码升级。
+	
+	固件版本：OpenWrt v2021.11.17 / LuCI Master (git-21.320.49600-21168d4)
+	内核版本：5.4.158
+	
 2021-11-14
 	1、增加京东签到服务。
 	
