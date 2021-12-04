@@ -1,0 +1,83 @@
+
+config global
+	option netflix_proxy '0'
+	option threads '0'
+	option run_mode 'router'
+	option dports '2'
+	option monitor_enable '1'
+	option enable_switch '1'
+	option switch_timeout '5'
+	option switch_try_count '3'
+	option gfwlist_url 'https://cdn.jsdelivr.net/gh/YW5vbnltb3Vz/domain-list-community@release/gfwlist.txt'
+	option chnroute_url 'https://ispip.clang.cn/all_cn.txt'
+	option switch_time '120'
+	option adblock '0'
+	option global_server 'cfg064a8f'
+	option udp_relay_server 'same'
+	option pdnsd_enable '0'
+	option netflix_enable '1'
+	option nfip_url 'https://cdn.jsdelivr.net/gh/QiuSimons/Netflix_IP/getflix.txt'
+	option netflix_server 'same'
+
+config server_subscribe
+	option proxy '0'
+	option auto_update_time '2'
+	option auto_update '1'
+	option filter_words '过期时间/剩余流量/QQ群/官网/防失联地址/回国'
+	list subscribe_url 'https://gssiwmd.netlify.app'
+	option switch '1'
+
+config access_control
+	option lan_ac_mode '0'
+	option router_proxy '1'
+	list wan_fw_ips '149.154.160.0/20'
+	list wan_fw_ips '67.198.55.0/24'
+	list wan_fw_ips '91.108.4.0/22'
+	list wan_fw_ips '91.108.56.0/22'
+	list wan_fw_ips '109.239.140.0/24'
+	list Interface 'lan'
+
+config socks5_proxy
+	option server 'nil'
+	option local_port '1080'
+
+config server_global
+	option enable_server '0'
+
+config servers
+	option tls '0'
+	option type 'v2ray'
+	option v2ray_protocol 'vless'
+	option local_port '1234'
+	option kcp_param '--nocomp'
+	option vless_flow 'xtls-rprx-direct'
+	option server_port '443'
+	option hashkey 'e861495e500a7a201f0789d496134fe0'
+	option vless_encryption 'none'
+	option xtls '1'
+	option vmess_id '417e548f-f4df-48d9-becf-9850cd52ad86'
+	option grouphashkey '8d234d23258e7033fd4b8512d1183e6c'
+	option transport 'tcp'
+	option alias 'Tencent-vless-tcp-xtls'
+	option server 'tencent.gssiwmd.ga'
+	option switch_enable '1'
+	option ip '119.28.134.46'
+
+config servers
+	option tls '0'
+	option type 'v2ray'
+	option v2ray_protocol 'vless'
+	option local_port '1234'
+	option kcp_param '--nocomp'
+	option vless_flow 'xtls-rprx-direct'
+	option server_port '443'
+	option hashkey '756073583ecb0613b41215fbcb772a57'
+	option vless_encryption 'none'
+	option xtls '1'
+	option vmess_id '454bdbe4-88bc-4c31-8810-ed7ba6732416'
+	option grouphashkey '8d234d23258e7033fd4b8512d1183e6c'
+	option transport 'tcp'
+	option alias 'vless-tcp-xtls'
+	option server 'vpsdl.gssiwmd.ga'
+	option switch_enable '1'
+
