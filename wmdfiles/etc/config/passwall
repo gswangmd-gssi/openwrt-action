@@ -15,6 +15,7 @@ config global
 	option enabled '1'
 	option udp_node 'tcp'
 	option tcp_node '2dba537b35504bc8bf74ab4b0df9e137'
+	option chinadns_ng '0'
 
 config global_haproxy
 	option balancing_enable '0'
