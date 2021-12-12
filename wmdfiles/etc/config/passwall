@@ -12,10 +12,10 @@ config global
 	option trojan_loglevel '2'
 	option dns_mode 'custom'
 	option custom_dns '127.0.0.1#5335'
-	option enabled '1'
-	option udp_node 'tcp'
-	option tcp_node '2dba537b35504bc8bf74ab4b0df9e137'
 	option chinadns_ng '0'
+	option enabled '0'
+	option tcp_node 'nil'
+	option udp_node 'nil'
 
 config global_haproxy
 	option balancing_enable '0'
