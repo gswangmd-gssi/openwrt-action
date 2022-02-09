@@ -12,8 +12,8 @@ config global
 	option netflix_server 'nil'
 	option enable_switch '0'
 	option netflix_enable '0'
-	option global_server 'cfg064a8f'
 	option udp_relay_server 'same'
+	option global_server 'cfg064a8f'
 
 config server_subscribe
 	option proxy '0'
@@ -48,14 +48,14 @@ config servers
 	option kcp_param '--nocomp'
 	option vless_flow 'xtls-rprx-direct'
 	option server_port '443'
-	option hashkey 'e861495e500a7a201f0789d496134fe0'
+	option hashkey '0989269fb4f3a79e21fa825e84b66a2d'
 	option vless_encryption 'none'
 	option xtls '1'
 	option vmess_id '417e548f-f4df-48d9-becf-9850cd52ad86'
 	option grouphashkey '8d234d23258e7033fd4b8512d1183e6c'
 	option transport 'tcp'
-	option alias 'Tencent-vless-tcp-xtls'
-	option server 'tencent.gssiwmd.ga'
-	option switch_enable '1'
+	option alias 'vless-tcp-xtls'
+	option server 'proxy.gssiwmd.ga'
+	option switch_enable '0'
 	option ip '119.28.134.46'
 
