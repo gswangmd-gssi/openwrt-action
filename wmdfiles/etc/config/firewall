@@ -4,6 +4,8 @@ config defaults
 	option output 'ACCEPT'
 	option forward 'ACCEPT'
 	option fullcone '1'
+	option syn_flood '1'
+	option drop_invalid '1'
 
 config zone
 	option name 'lan'
@@ -11,19 +13,10 @@ config zone
 	option input 'ACCEPT'
 	option output 'ACCEPT'
 	option forward 'ACCEPT'
+	option masq '1'
 
 config include
 	option path '/etc/firewall.user'
-
-config include 'zerotier'
-	option type 'script'
-	option path '/etc/zerotier.start'
-	option reload '1'
-
-config include 'mia'
-	option type 'script'
-	option path '/etc/mia.include'
-	option reload '1'
 
 config include 'passwall'
 	option type 'script'
@@ -33,6 +26,16 @@ config include 'passwall'
 config include 'passwall_server'
 	option type 'script'
 	option path '/var/etc/passwall_server.include'
+	option reload '1'
+
+config include 'zerotier'
+	option type 'script'
+	option path '/etc/zerotier.start'
+	option reload '1'
+
+config include 'mia'
+	option type 'script'
+	option path '/etc/mia.include'
 	option reload '1'
 
 config include 'shadowsocksr'
@@ -46,4 +49,9 @@ config rule 'kms'
 	option src 'wan'
 	option proto 'tcp'
 	option dest_port '1688'
+
+config include 'AdGuardHome'
+	option type 'script'
+	option path '/usr/share/AdGuardHome/firewall.start'
+	option reload '1'
 
