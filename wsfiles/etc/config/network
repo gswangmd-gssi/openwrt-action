@@ -19,3 +19,7 @@ config interface 'lan'
 	option ifname 'eth0'
 	option dns '127.0.0.1'
 
+config interface 'WAN'
+	option proto 'none'
+	option ifname 'eth0'
+
