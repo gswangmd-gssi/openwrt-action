@@ -6,6 +6,8 @@ config defaults
 	option fullcone '1'
 	option syn_flood '1'
 	option drop_invalid '1'
+	option flow_offloading_hw '0'
+	option flow_offloading '0'
 
 config zone
 	option name 'lan'
@@ -28,14 +30,21 @@ config include 'passwall_server'
 	option path '/var/etc/passwall_server.include'
 	option reload '1'
 
-config include 'zerotier'
-	option type 'script'
-	option path '/etc/zerotier.start'
-	option reload '1'
-
 config include 'mia'
 	option type 'script'
 	option path '/etc/mia.include'
+	option reload '1'
+
+config zone 'docker'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'ACCEPT'
+	option name 'docker'
+	list network 'docker'
+
+config include 'zerotier'
+	option type 'script'
+	option path '/etc/zerotier.start'
 	option reload '1'
 
 config include 'shadowsocksr'

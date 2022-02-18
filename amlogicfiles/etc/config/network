@@ -6,34 +6,23 @@ config interface 'loopback'
 	option netmask '255.0.0.0'
 
 config globals 'globals'
-	option ula_prefix 'fd6a:6bfa:7976::/48'
+	option ula_prefix 'fde6:1c55:9b1e::/48'
 
 config interface 'lan'
-	option type 'bridge'
-	option ifname 'eth0.1'
+	option ifname 'eth0'
 	option proto 'static'
 	option netmask '255.255.255.0'
 	option ip6assign '60'
 	option ipaddr '10.10.10.252'
 	option gateway '10.10.10.254'
-	option dns '127.0.0.1'
+	option dns '10.10.10.252'
 
-config device 'wan_eth0_2_dev'
-	option name 'eth0.2'
-	option macaddr '60:45:CB:66:05:a1'
+config device
+	option type 'bridge'
+	option name 'docker0'
 
-config switch
-	option name 'switch0'
-	option reset '1'
-	option enable_vlan '1'
-
-config switch_vlan
-	option device 'switch0'
-	option vlan '1'
-	option ports '0 1 2 3 5t'
-
-config switch_vlan
-	option device 'switch0'
-	option vlan '2'
-	option ports '4 5t'
+config interface 'docker'
+	option ifname 'docker0'
+	option proto 'none'
+	option auto '0'
 
