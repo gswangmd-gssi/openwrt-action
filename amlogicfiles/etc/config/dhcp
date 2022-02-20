@@ -28,8 +28,8 @@ config dhcp 'lan'
 	list ra_flags 'other-config'
 	option start '100'
 	option limit '150'
-	option leasetime '12h'
 	option force '1'
+	option leasetime '180d'
 
 config dhcp 'wan'
 	option interface 'wan'
@@ -47,11 +47,4 @@ config odhcpd 'odhcpd'
 	option leasefile '/tmp/hosts/odhcpd'
 	option leasetrigger '/usr/sbin/odhcpd-update'
 	option loglevel '4'
-
-config host
-	option name 'AX6000'
-	option dns '1'
-	option mac '3c:cd:57:f6:b5:08'
-	option ip '10.10.10.88'
-	option leasetime 'infinite'
 

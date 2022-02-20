@@ -1,2 +1,1 @@
-*/5 * * * * /etc/Wol-ESXI.sh
-
+*/5 * * * * /etc/wolesxi.sh
