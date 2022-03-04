@@ -12,7 +12,8 @@ config global
 	option netflix_server 'nil'
 	option enable_switch '0'
 	option netflix_enable '0'
-	option global_server 'nil'
+	option global_server 'cfg064a8f'
+	option udp_relay_server 'same'
 
 config server_subscribe
 	option proxy '0'
