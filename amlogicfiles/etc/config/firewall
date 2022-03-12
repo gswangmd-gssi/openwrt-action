@@ -6,6 +6,7 @@ config defaults
 	option syn_flood '1'
 	option flow_offloading_hw '0'
 	option flow_offloading '0'
+	option fullcone '0'
 
 config zone
 	option name 'lan'
@@ -18,6 +19,13 @@ config zone
 
 config include
 	option path '/etc/firewall.user'
+
+config zone 'docker'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'ACCEPT'
+	option name 'docker'
+	list network 'docker'
 
 config include 'zerotier'
 	option type 'script'
@@ -46,13 +54,6 @@ config rule 'kms'
 	option src 'wan'
 	option proto 'tcp'
 	option dest_port '1688'
-
-config zone 'docker'
-	option input 'ACCEPT'
-	option output 'ACCEPT'
-	option forward 'ACCEPT'
-	option name 'docker'
-	list network 'docker'
 
 config include 'AdGuardHome'
 	option type 'script'
