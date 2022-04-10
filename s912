@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo rm -rf ./out/*.*
+git pull
+sudo ./make -d -b s912 -v stable -k 5.4.185
