@@ -14,6 +14,7 @@ config interface 'lan'
 	option ipaddr '10.10.10.252'
 	option netmask '255.255.255.0'
 	option ip6assign '60'
+	option dns '127.0.0.1'
 
 config interface 'docker'
 	option ifname 'docker0'
