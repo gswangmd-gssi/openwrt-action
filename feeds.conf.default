@@ -6,6 +6,7 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 #src-git targets https://github.com/openwrt/targets.git
 #src-git oldpackages http://git.openwrt.org/packages.git
 #src-link custom /usr/src/openwrt/custom-feed
-src-git gssipackages https://github.com/gswangmd-gssi/gssi-packages.git
-src-git helloworld https://github.com/fw876/helloworld.git
-src-git amlogic https://github.com/ophub/luci-app-amlogic.git
+src-git gssipackages https://github.com/gswangmd-gssi/gssi-packages
+src-git helloworld https://github.com/fw876/helloworld
+src-git amlogic https://github.com/ophub/luci-app-amlogic
+src-git OpenClash https://github.com/WYC-2020/OpenClash

@@ -14,7 +14,7 @@ config global
 	option global_server 'cfg064a8f'
 	option udp_relay_server 'same'
 	option enable_switch '1'
-	option switch_time '120'
+	option switch_time '60'
 	option switch_timeout '5'
 	option switch_try_count '3'
 
