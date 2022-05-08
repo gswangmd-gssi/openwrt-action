@@ -3,10 +3,8 @@ config defaults
 	option input 'ACCEPT'
 	option output 'ACCEPT'
 	option forward 'ACCEPT'
-	option syn_flood '1'
 	option flow_offloading_hw '0'
 	option flow_offloading '0'
-	option fullcone '0'
 
 config zone
 	option name 'lan'
@@ -15,17 +13,14 @@ config zone
 	option forward 'ACCEPT'
 	option masq '1'
 	option network 'lan wan'
-	option mtu_fix '1'
 
 config include
 	option path '/etc/firewall.user'
 
-config zone 'docker'
-	option input 'ACCEPT'
-	option output 'ACCEPT'
-	option forward 'ACCEPT'
-	option name 'docker'
-	list network 'docker'
+config include 'AdGuardHome'
+	option type 'script'
+	option path '/usr/share/AdGuardHome/firewall.start'
+	option reload '1'
 
 config include 'zerotier'
 	option type 'script'
@@ -54,9 +49,4 @@ config rule 'kms'
 	option src 'wan'
 	option proto 'tcp'
 	option dest_port '1688'
-
-config include 'AdGuardHome'
-	option type 'script'
-	option path '/usr/share/AdGuardHome/firewall.start'
-	option reload '1'
 
