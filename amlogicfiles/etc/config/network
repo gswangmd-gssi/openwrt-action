@@ -13,7 +13,7 @@ config interface 'lan'
 	option proto 'static'
 	option ipaddr '10.10.10.252'
 	option netmask '255.255.255.0'
-	option dns '10.10.10.252'
+	option dns '10.10.10.252 223.5.5.5'
 	option gateway '10.10.10.254'
 
 config device
