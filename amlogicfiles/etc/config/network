@@ -15,6 +15,7 @@ config interface 'lan'
 	option netmask '255.255.255.0'
 	option dns '10.10.10.252 223.5.5.5'
 	option gateway '10.10.10.254'
+	option type 'bridge'
 
 config device
 	option type 'bridge'
