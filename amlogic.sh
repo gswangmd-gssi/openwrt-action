@@ -8,7 +8,7 @@ cp -rf ../openwrt-action/amlogicfiles/* ./files
 cp -rf ../openwrt-action/amlogic.config .config
 
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
-sed -i 's/luci-theme-bootstrap/luci-theme-argon1806/g' ./feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon-1806/g' ./feeds/luci/collections/luci/Makefile
 # Add autocore support for armvirt
 sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' ./package/lean/autocore/Makefile
 # Set etc/openwrt_release
