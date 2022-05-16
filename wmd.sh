@@ -6,7 +6,7 @@ cp -rf ../openwrt-action/wmdfiles/* ./files
 
 git pull
 ./scripts/feeds update -a && ./scripts/feeds install -a
-cp -rf ../openwrt-action/wmd.config .config
+cp -rf ../openwrt-action/configs/wmd.config .config
 cp -rf ../openwrt-action/zzz-default-settings-wmd ./package/lean/default-settings/files/zzz-default-settings
 #sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
 
