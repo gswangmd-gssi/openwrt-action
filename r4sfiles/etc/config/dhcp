@@ -47,3 +47,9 @@ config odhcpd 'odhcpd'
 	option leasetrigger '/usr/sbin/odhcpd-update'
 	option loglevel '4'
 
+config host
+	option name 'ax6000'
+	option dns '1'
+	option mac '3c:cd:57:f6:b5:08'
+	option leasetime 'infinite'
+	option ip '10.10.10.168'

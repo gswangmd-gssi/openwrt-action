@@ -46,22 +46,10 @@ config proxy
 	option type 'http'
 	option domain_type 'custom_domains'
 	option custom_domains 'openwrt.gssiwmd.ga'
-	option local_ip '10.10.10.252'
 	option local_port '80'
 	option proxy_protocol_version 'disable'
 	option use_encryption '1'
 	option use_compression '1'
 	option remark 'gssiwmd-openwrt'
-
-config proxy
-	option enable '1'
-	option type 'http'
-	option domain_type 'custom_domains'
-	option custom_domains 'ikuai.gssiwmd.ga'
 	option local_ip '10.10.10.254'
-	option local_port '80'
-	option proxy_protocol_version 'disable'
-	option use_encryption '1'
-	option use_compression '1'
-	option remark 'gssiwmd-ikuai'
 
