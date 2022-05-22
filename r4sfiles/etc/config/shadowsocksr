@@ -2,7 +2,6 @@
 config global
 	option netflix_proxy '0'
 	option threads '0'
-	option run_mode 'router'
 	option dports '2'
 	option monitor_enable '1'
 	option gfwlist_url 'https://cdn.jsdelivr.net/gh/YW5vbnltb3Vz/domain-list-community@release/gfwlist.txt'
@@ -17,6 +16,7 @@ config global
 	option switch_time '120'
 	option switch_timeout '5'
 	option switch_try_count '3'
+	option run_mode 'router'
 
 config server_subscribe
 	option proxy '0'
