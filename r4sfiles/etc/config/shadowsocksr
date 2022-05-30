@@ -10,13 +10,12 @@ config global
 	option pdnsd_enable '0'
 	option netflix_server 'nil'
 	option netflix_enable '0'
-	option global_server 'cfg064a8f'
-	option udp_relay_server 'same'
 	option enable_switch '1'
 	option switch_time '120'
 	option switch_timeout '5'
 	option switch_try_count '3'
 	option run_mode 'router'
+	option global_server 'nil'
 
 config server_subscribe
 	option proxy '0'

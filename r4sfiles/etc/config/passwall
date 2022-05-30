@@ -1,0 +1,166 @@
+
+config global
+	option socks_enabled '0'
+	option dns_mode 'dns2tcp'
+	option remote_dns '1.1.1.1'
+	option tcp_proxy_mode 'chnroute'
+	option udp_proxy_mode 'chnroute'
+	option localhost_tcp_proxy_mode 'default'
+	option localhost_udp_proxy_mode 'default'
+	option close_log_tcp '0'
+	option close_log_udp '0'
+	option loglevel 'error'
+	option trojan_loglevel '4'
+	option enabled '1'
+	option tcp_node '260de7837f7e4df5a456d866fd124d18'
+	option udp_node '260de7837f7e4df5a456d866fd124d18'
+	option dns_shunt 'dnsmasq'
+
+config global_haproxy
+	option balancing_enable '0'
+
+config global_delay
+	option auto_on '0'
+	option start_daemon '1'
+	option start_delay '5'
+
+config global_forwarding
+	option tcp_no_redir_ports 'disable'
+	option udp_no_redir_ports 'disable'
+	option tcp_proxy_drop_ports 'disable'
+	option udp_proxy_drop_ports '80,443'
+	option tcp_redir_ports '22,25,53,143,465,587,853,993,995,80,443'
+	option udp_redir_ports '1:65535'
+	option accept_icmp '0'
+	option tcp_proxy_way 'redirect'
+	option ipv6_tproxy '0'
+	option sniffing '1'
+	option route_only '0'
+
+config global_other
+	option nodes_ping 'auto_ping tcping'
+
+config global_rules
+	option auto_update '0'
+	option chnlist_update '1'
+	option chnroute_update '1'
+	option chnroute6_update '1'
+	option gfwlist_update '1'
+	option geosite_update '0'
+	option geoip_update '0'
+	list gfwlist_url 'https://fastly.jsdelivr.net/gh/YW5vbnltb3Vz/domain-list-community@release/gfwlist.txt'
+	list chnroute_url 'https://ispip.clang.cn/all_cn.txt'
+	list chnroute6_url 'https://ispip.clang.cn/all_cn_ipv6.txt'
+	list chnlist_url 'https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf'
+	list chnlist_url 'https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/apple.china.conf'
+	list chnlist_url 'https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/google.china.conf'
+	option v2ray_location_asset '/usr/share/v2ray/'
+
+config global_app
+	option v2ray_file '/usr/bin/v2ray'
+	option xray_file '/usr/bin/xray'
+	option trojan_go_file '/usr/bin/trojan-go'
+	option brook_file '/usr/bin/brook'
+	option hysteria_file '/usr/bin/hysteria'
+
+config global_subscribe
+	option subscribe_proxy '0'
+	option filter_keyword_mode '1'
+	list filter_discard_list '过期时间'
+	list filter_discard_list '剩余流量'
+	list filter_discard_list 'QQ群'
+	list filter_discard_list '官网'
+	option ss_aead_type 'shadowsocks-libev'
+	option trojan_type 'trojan-plus'
+
+config auto_switch
+	option enable '0'
+	option testing_time '1'
+	option connect_timeout '3'
+	option retry_num '3'
+	option shunt_logic '1'
+
+config nodes 'myshunt'
+	option remarks '分流总节点'
+	option type 'Xray'
+	option protocol '_shunt'
+	option AD 'nil'
+	option BT '_direct'
+	option Netflix 'nil'
+	option TVB 'nil'
+	option China 'nil'
+	option default_node 'nil'
+	option domainStrategy 'IPOnDemand'
+
+config shunt_rules 'AD'
+	option remarks 'AD'
+	option domain_list 'geosite:category-ads-all'
+
+config shunt_rules 'BT'
+	option remarks 'BT'
+	option protocol 'bittorrent'
+
+config shunt_rules 'Netflix'
+	option remarks 'Netflix'
+	option domain_list 'fast.com
+netflix
+netflix.ca
+netflix.com
+netflix.net
+nflxso.net
+nflxext.com
+nflximg.com
+nflximg.net
+nflxsearch.net
+nflxvideo.net
+netflixdnstest0.com
+netflixdnstest1.com
+netflixdnstest2.com
+netflixdnstest3.com
+netflixdnstest4.com
+netflixdnstest5.com
+netflixdnstest6.com
+netflixdnstest7.com
+netflixdnstest8.com
+netflixdnstest9.com
+netflixdnstest10.com'
+
+config shunt_rules 'TVB'
+	option remarks 'TVB'
+	option domain_list 'tvb.com
+mytvsuper.com'
+
+config shunt_rules 'China'
+	option remarks 'China'
+	option domain_list 'geosite:cn'
+	option ip_list 'geoip:cn'
+
+config subscribe_list
+	option remark 'my_proxy'
+	option url 'https://gssiwmd.netlify.app'
+	option allowInsecure '1'
+	option filter_keyword_mode '5'
+	option ss_aead_type 'global'
+	option trojan_type 'global'
+	option auto_update '0'
+	option user_agent 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+
+config nodes '260de7837f7e4df5a456d866fd124d18'
+	option flow 'xtls-rprx-direct'
+	option protocol 'vless'
+	option encryption 'none'
+	option add_from 'my_proxy'
+	option port '443'
+	option remarks 'vless-tcp-xtls'
+	option add_mode '2'
+	option uuid '417e548f-f4df-48d9-becf-9850cd52ad86'
+	option timeout '60'
+	option tcp_guise_http_path '/'
+	option tls_allowInsecure '1'
+	option tls '1'
+	option address 'proxy.gssiwmd.ga'
+	option type 'Xray'
+	option tcp_guise 'none'
+	option xtls '1'
+	option transport 'tcp'
+
