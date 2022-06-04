@@ -18,8 +18,7 @@ config dnsmasq
 	option filter_aaaa '1'
 	option localuse '1'
 	list server '127.0.0.1#1745'
-	option resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
-	option noresolv '0'
+	option noresolv '1'
 
 config dhcp 'lan'
 	option interface 'lan'
@@ -48,3 +47,9 @@ config odhcpd 'odhcpd'
 	option leasetrigger '/usr/sbin/odhcpd-update'
 	option loglevel '4'
 
+config host
+	option name 'ax6000'
+	option dns '1'
+	option mac '3c:cd:57:f6:b5:08'
+	option leasetime 'infinite'
+	option ip '10.10.10.168'

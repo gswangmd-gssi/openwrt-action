@@ -1,8 +1,6 @@
 
 config global
 	option socks_enabled '0'
-	option dns_mode 'dns2tcp'
-	option remote_dns '1.1.1.1'
 	option tcp_proxy_mode 'chnroute'
 	option udp_proxy_mode 'chnroute'
 	option localhost_tcp_proxy_mode 'default'
@@ -14,7 +12,9 @@ config global
 	option enabled '1'
 	option tcp_node '260de7837f7e4df5a456d866fd124d18'
 	option udp_node '260de7837f7e4df5a456d866fd124d18'
-	option dns_shunt 'dnsmasq'
+	option dns_shunt 'smartdns'
+	option dns_mode 'dns2tcp'
+	option remote_dns '1.1.1.1'
 
 config global_haproxy
 	option balancing_enable '0'
@@ -46,8 +46,6 @@ config global_rules
 	option chnroute_update '1'
 	option chnroute6_update '1'
 	option gfwlist_update '1'
-	option geosite_update '0'
-	option geoip_update '0'
 	list gfwlist_url 'https://fastly.jsdelivr.net/gh/YW5vbnltb3Vz/domain-list-community@release/gfwlist.txt'
 	list chnroute_url 'https://ispip.clang.cn/all_cn.txt'
 	list chnroute6_url 'https://ispip.clang.cn/all_cn_ipv6.txt'
@@ -55,6 +53,8 @@ config global_rules
 	list chnlist_url 'https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/apple.china.conf'
 	list chnlist_url 'https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/google.china.conf'
 	option v2ray_location_asset '/usr/share/v2ray/'
+	option geoip_update '1'
+	option geosite_update '1'
 
 config global_app
 	option v2ray_file '/usr/bin/v2ray'
