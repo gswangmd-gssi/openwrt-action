@@ -1,16 +1,17 @@
 #!/bin/bash
 echo "Compile friendlyarm_nanopi-r4s for wangMingde......"
 git pull
+# rm -rf ./feeds/luci/applications/luci-app-netdata/
 ./scripts/feeds update -a && ./scripts/feeds install -a
 rm -rf ./files/*
-cp -rf ../openwrt-action/r4sfiles/* ./files
-cp -rf ../openwrt-action/configs/r4s.config .config
+cp -rf ../openwrt-action/leder4sfiles/* ./files
+cp -rf ../openwrt-action/configs/leder4s.config .config
 
 # Modify default linux KERNEL
 sed -i 's/KERNEL_PATCHVER=5.15/KERNEL_PATCHVER=5.4/g' ./target/linux/rockchip/Makefile
 
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
-sed -i 's/luci-theme-bootstrap/luci-theme-argon-1806/g' ./feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
 
 # Add autocore support for armvirt
 #sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' ./package/lean/autocore/Makefile
@@ -26,6 +27,5 @@ make defconfig
 
 #PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin make -j$(($(nproc) + 1)) V=s
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin make -j1 V=s 
-
 exit 0
 
