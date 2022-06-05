@@ -9,12 +9,12 @@ config global
 	option close_log_udp '0'
 	option loglevel 'error'
 	option trojan_loglevel '4'
-	option enabled '1'
-	option tcp_node '260de7837f7e4df5a456d866fd124d18'
-	option udp_node '260de7837f7e4df5a456d866fd124d18'
 	option dns_shunt 'smartdns'
 	option dns_mode 'dns2tcp'
 	option remote_dns '1.1.1.1'
+	option enabled '1'
+	option tcp_node '260de7837f7e4df5a456d866fd124d18'
+	option udp_node 'tcp'
 
 config global_haproxy
 	option balancing_enable '0'
