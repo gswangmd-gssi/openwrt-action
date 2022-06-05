@@ -1,8 +1,0 @@
-
-config settings 'cpufreq'
-	option upthreshold '50'
-	option factor '10'
-	option governor 'performance'
-	option maxfreq '1800000'
-	option minifreq '408000'
-	

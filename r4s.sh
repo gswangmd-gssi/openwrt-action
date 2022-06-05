@@ -4,8 +4,8 @@ git pull
 # rm -rf ./feeds/luci/applications/luci-app-netdata/
 ./scripts/feeds update -a && ./scripts/feeds install -a
 rm -rf ./files/*
-cp -rf ../openwrt-action/leder4sfiles/* ./files
-cp -rf ../openwrt-action/configs/leder4s.config .config
+cp -rf ../openwrt-action/r4sfiles/* ./files
+cp -rf ../openwrt-action/configs/r4s.config .config
 
 # Modify default linux KERNEL
 sed -i 's/KERNEL_PATCHVER=5.15/KERNEL_PATCHVER=5.4/g' ./target/linux/rockchip/Makefile

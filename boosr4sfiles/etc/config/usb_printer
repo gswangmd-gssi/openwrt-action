@@ -1,8 +1,0 @@
-
-config printer
-	option enabled '1'
-	option device '3f0/e17/100'
-	option bind '10.10.10.252'
-	option port '0'
-	option bidirectional '1'
-
