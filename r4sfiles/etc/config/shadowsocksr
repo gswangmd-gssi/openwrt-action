@@ -15,7 +15,8 @@ config global
 	option switch_timeout '5'
 	option switch_try_count '3'
 	option run_mode 'router'
-	option global_server 'nil'
+	option global_server 'cfg064a8f'
+	option udp_relay_server 'same'
 
 config server_subscribe
 	option proxy '0'

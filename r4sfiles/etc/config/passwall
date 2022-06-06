@@ -12,9 +12,9 @@ config global
 	option dns_shunt 'smartdns'
 	option dns_mode 'dns2tcp'
 	option remote_dns '1.1.1.1'
-	option enabled '1'
-	option tcp_node '260de7837f7e4df5a456d866fd124d18'
-	option udp_node 'tcp'
+	option enabled '0'
+	option tcp_node 'nil'
+	option udp_node 'nil'
 
 config global_haproxy
 	option balancing_enable '0'
