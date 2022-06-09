@@ -8,8 +8,9 @@ config upnpd 'config'
 	option uuid '374211c6-a154-408a-abf6-ee440960a271'
 	option enable_natpmp '0'
 	option secure_mode '0'
-	option enabled '0'
 	option presentation_url 'http://10.10.10.254/'
+	option enabled '1'
+	option enable_upnp '0'
 
 config perm_rule
 	option action 'allow'
