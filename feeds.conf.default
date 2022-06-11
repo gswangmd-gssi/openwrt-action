@@ -7,7 +7,4 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 #src-git oldpackages http://git.openwrt.org/packages.git
 #src-link custom /usr/src/openwrt/custom-feed
 src-git gssipackages https://github.com/gswangmd-gssi/gssi-packages
-src-git helloworld https://github.com/fw876/helloworld
-src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2
-src-git OpenClash https://github.com/vernesong/OpenClash
-src-git amlogic https://github.com/ophub/luci-app-amlogic
+src-git smallpackage https://github.com/gswangmd-gssi/small-package
