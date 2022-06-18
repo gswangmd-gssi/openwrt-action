@@ -17,7 +17,6 @@ config dnsmasq
 	option cachesize '5000'
 	option filter_aaaa '1'
 	option localuse '1'
-	list server '127.0.0.1#1745'
 	option noresolv '1'
 
 config dhcp 'lan'
