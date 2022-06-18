@@ -2,7 +2,7 @@
 echo "Compile friendlyarm_nanopi-r4s for wangMingde......"
 git pull
 # rm -rf ./feeds/luci/applications/luci-app-netdata/
-./scripts/feeds update -a && ./scripts/feeds install -a
+./scripts/feeds update -a && ./scripts/feeds install -a -f
 rm -rf ./files/*
 cp -rf ../openwrt-action/r4sfiles/* ./files
 cp -rf ../openwrt-action/configs/r4s.config .config
@@ -12,7 +12,8 @@ sed -i 's/KERNEL_PATCHVER=5.15/KERNEL_PATCHVER=5.4/g' ./target/linux/rockchip/Ma
 
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
-
+sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci-nginx/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci-ssl-nginx/Makefile
 # Add autocore support for armvirt
 #sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' ./package/lean/autocore/Makefile
 
