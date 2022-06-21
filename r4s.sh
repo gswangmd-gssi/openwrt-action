@@ -5,6 +5,8 @@ git pull
 ./scripts/feeds update -a && ./scripts/feeds install -a -f
 rm -rf ./files/*
 cp -rf ../openwrt-action/r4sfiles/* ./files
+cp ../MPTCP/* ./files
+
 cp -rf ../openwrt-action/configs/r4s.config .config
 
 # Modify default linux KERNEL
