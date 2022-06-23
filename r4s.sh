@@ -5,14 +5,14 @@ git pull
 ./scripts/feeds update -a && ./scripts/feeds install -a -f
 rm -rf ./files/*
 cp -rf ../openwrt-action/r4sfiles/* ./files
-cp ../MPTCP/* ./files
+cp -rf ../MPTCP/r4sfiles/* ./files
 
 cp -rf ../openwrt-action/configs/r4s.config .config
 
 # Modify default linux KERNEL
 sed -i 's/KERNEL_PATCHVER=5.15/KERNEL_PATCHVER=5.4/g' ./target/linux/rockchip/Makefile
 
-# Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
+# Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-argonne）
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci-nginx/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci-ssl-nginx/Makefile
@@ -21,10 +21,6 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/lu
 
 # Set etc/openwrt_release
 sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" ./package/lean/default-settings/files/zzz-default-settings
-echo "DISTRIB_SOURCECODE='lede'" >> ./package/base-files/files/etc/openwrt_release
-
-# Modify default IP（FROM 192.168.1.1 CHANGE TO 10.10.10.254）
-sed -i 's/192.168.1.1/10.10.10.254/g' ./package/base-files/files/bin/config_generate
 
 make defconfig
 
