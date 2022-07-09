@@ -1,0 +1,18 @@
+
+config mosdns 'mosdns'
+	option geo_update_day_time '2'
+	option redirect '1'
+	option autoconf '1'
+	option syncconfig '1'
+	option configfile './def_config.yaml'
+	option loglv 'info'
+	option logfile '/tmp/mosdns.txt'
+	option listen_port '5335'
+	option not_first_start '1'
+	option enabled '1'
+	option remote_dns1 'tls://1.1.1.1'
+	option remote_dns2 '208.67.222.222'
+	option adblock '1'
+	option geo_auto_update '1'
+	option geo_update_week_time '*'
+
